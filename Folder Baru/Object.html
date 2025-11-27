@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipe data Object</title>
+</head>
+<body>
+  
+   <script>
+
+      const person = {  //kurung kurawan untuk tipe data object
+        "nama" : "Syauqi Nuzul Abdi",
+        alamat : "Bontang",
+        umur : 19
+      }
+
+      console.info(`nama : ${person["nama lengkap"]}`);
+      console.info(`alamat : ${person.alamat}`);
+      console.info(`umur : ${person.umur}`);
+
+      //menambah atau mengubah
+      // person["nama"] = "Syauqi Nuzul Abdi";
+      // person["alamat"] = "Bontang";
+      // person["umur"] = 19;
+
+      // console.table(person);
+
+      //menghapus
+      delete person["umur"];
+
+      console.table(person);
+
+      
+
+   </script>
+
+</body>
+</html>

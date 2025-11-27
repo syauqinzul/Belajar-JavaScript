@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Interaktif</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .hasil {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Sederhana</h1>
+        
+        <input type="number" id="angka1" placeholder="Angka pertama">
+        <input type="number" id="angka2" placeholder="Angka kedua">
+        
+        <br><br>
+        
+        <button onclick="hitung('tambah')">Tambah (+)</button>
+        <button onclick="hitung('kurang')">Kurang (-)</button>
+        <button onclick="hitung('kali')">Kali (×)</button>
+        <button onclick="hitung('bagi')">Bagi (÷)</button>
+        
+        <div class="hasil" id="hasil">
+            Hasil akan muncul di sini
+        </div>
+    </div>
+
+    <script>
+        function hitung(operasi) {
+            const angka1 = parseFloat(document.getElementById('angka1').value);
+            const angka2 = parseFloat(document.getElementById('angka2').value);
+            const hasilElement = document.getElementById('hasil');
+            
+            if (isNaN(angka1) || isNaN(angka2)) {
+                hasilElement.innerHTML = "Masukkan angka yang valid!";
+                hasilElement.style.color = "red";
+                return;
+            }
+            
+            let hasil;
+            switch(operasi) {
+                case 'tambah':
+                    hasil = angka1 + angka2;
+                    break;
+                case 'kurang':
+                    hasil = angka1 - angka2;
+                    break;
+                case 'kali':
+                    hasil = angka1 * angka2;
+                    break;
+                case 'bagi':
+                    if (angka2 === 0) {
+                        hasilElement.innerHTML = "Tidak bisa membagi dengan nol!";
+                        hasilElement.style.color = "red";
+                        return;
+                    }
+                    hasil = angka1 / angka2;
+                    break;
+            }
+            
+            hasilElement.innerHTML = `Hasil: ${hasil}`;
+            hasilElement.style.color = "green";
+        }
+    </script>
+</body>
+</html>

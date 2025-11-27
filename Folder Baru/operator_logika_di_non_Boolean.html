@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>opertaot logika di non Boolean</title>
+</head>
+<body>
+  <script>
+
+   console.info("hello" || "");
+   console.info("" || []);
+   console.info("0" || "nol");
+   console.info(0 || "nol");
+   console.info(null || "null");
+   console.info(undefined || "undefined");
+   console.info(0 || false);
+   
+  const person = {
+    firstName : "Syauqi",
+    lastName : "Nuzul Abdi"
+  };
+
+  const name = person.personName || person.lastName;
+  console.info(name);
+
+  </script>
+</body>
+</html>

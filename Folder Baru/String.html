@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Template</title>
+</head>
+<body>
+  
+  <script>
+
+    const name = "Syauqi Nuzul Abdi";
+    const firstName = "Syauqi";
+    const middleName = "Nuzul";
+    const lastName = "Abdi"
+    const template = `Name : ${name}`;
+
+    console.info(template);
+
+    const nilai = 90;
+    const template2 = `Name : ${name}, lulus : ${nilai > 70}`;
+
+    console.info(template2);
+
+
+    const multilane = `Nama saya Syauqi Nuzul Abdi
+Sekarang Full Stack Development,
+Programer Zaman Now,
+Rajin Ibadah, Belajar, Sukses Dunia & Akhirat`;
+
+
+    document.writeln("<pre>")
+    document.writeln(multilane)
+    document.writeln("<pre>")
+
+  </script>
+
+</body>
+</html>

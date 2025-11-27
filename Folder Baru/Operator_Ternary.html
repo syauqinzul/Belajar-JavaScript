@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operator Ternary</title>
+</head>
+<body>
+  
+ <script>
+
+  const nilai = 85;
+  let ucapan;
+
+  if (nilai >= 75) {
+    ucapan = "Selamat Anda Lulus";
+  } else {
+    ucapan = "Coba Lagi Yaa";
+  }
+
+  document.writeln(`<p>${ucapan}</p>`);
+
+  ucapan = nilai >= 75 ? "Selamat Anda Lulus" : "Coba Lagi Yaa";
+
+  document.writeln(`<p>${ucapan}</p>`);
+
+ </script>
+
+</body>
+</html>

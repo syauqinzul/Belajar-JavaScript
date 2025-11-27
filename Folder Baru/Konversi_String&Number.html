@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konversi String & Number</title>
+</head>
+<body>
+  
+  <script>
+
+     const value1 = parseInt("1");
+     const value2 = 1;
+     const sum = value1 + value2;
+
+     document.writeln(`<p>${sum}</p>`)
+
+     document.writeln(`<p>${parseInt("1.5")}</p>`)
+     document.writeln(`<p>${parseFloat("1.1")}</p>`)
+     document.writeln(`<p>${Number("1.1")}</p>`)
+
+     const a = 1;
+     const b = 2;
+     const total = a.toString() + b.toString();
+     document.writeln(`<p>${total}</p>`)
+
+     /*Int dan parseFloat Mentolerin Kesalahan 
+     yang Ada di belakang Tapi kalau 
+     Kesalahan nya ada di Depan otomatis Salah*/
+
+     document.writeln(`<p>${parseInt("salah")}</p>`)
+     document.writeln(`<p>${parseFloat("1.1SYAUQI")}</p>`)
+
+    //  Number Tidak Mentolerin Kesalahan Sedikit Pun
+     document.writeln(`<p>${Number("salah")}</p>`);
+     document.writeln(`<p>${Number("1.1SYAUQI")}</p>`);
+
+     //function isNaN
+     document.writeln(`<p>${isNaN(parseInt)}</p>`);
+     document.writeln(`<p>${isNaN(100)}</p>`);
+     document.writeln(`<p>${isNaN(NaN)}</p>`);
+
+  </script>
+
+</body>
+</html>
