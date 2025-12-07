@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const names = ["Syauqi", "Nuzul", "Abdi", "Muhammad", "Naufal"];
+      const [firstName, middleName, lastName, ...others] = names;
+
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+      console.info(others); //data akan menjadi array baru (["Muhammad", "Naufal"])
+
+      const person = {
+        firstName: "Syauqi",
+        middleName: "Nuzul",
+        lastName: "Abdi",
+        age: 19,
+        address: {
+          street: "Jl.Kapten Piere Tendean. Perum Griya Wisata",
+          city: "Bontang",
+          country: "Indonesia",
+        },
+      };
+      const {
+        firstName: fn,
+        middleName: mn,
+        lastName: ln,
+        ...details
+      } = person;
+      console.info(fn);
+      console.info(mn);
+      console.info(ln);
+      console.info(details); //data akan menjadi object baru ({age: 20, address: "Indonesia"})
+    </script>
+  </body>
+</html>

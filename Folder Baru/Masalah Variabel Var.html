@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Menggunakan let dalam loop for
+      // Global scope
+      let i = 10;
+      for (let i = 0; i < 5; i++) {
+        // Local scope
+        // Nilai i di sini adalah 0, 1, 2, 3, 4
+        console.info(`local ${i}`);
+      }
+
+      // Tetap mengakses variabel i dari global scope
+      // Nilai i adalah 10
+      console.info(`global ${i}`);
+    </script>
+  </body>
+</html>

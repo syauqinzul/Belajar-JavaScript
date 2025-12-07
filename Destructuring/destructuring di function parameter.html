@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+    
+      const names = ["Syauqi", "Nuzul", "Abdi", "Muhammad", "Naufal"];
+      const [firstName, middleName, lastName, ...others] = names;
+
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+      console.info(others); //data akan menjadi array baru (["Muhammad", "Naufal"])
+
+      const person = {
+        firstName: "Syauqi",
+        middleName: "Nuzul",
+        lastName: "Abdi",
+        age: 19,
+        address: {
+          street: "Jl.Kapten Piere Tendean. Perum Griya Wisata",
+          city: "Bontang",
+          country: "Indonesia",
+        },
+      };
+      const {
+        firstName: fn,
+        middleName: mn,
+        lastName: ln,
+        ...details
+      } = person;
+      console.info(fn);
+      console.info(mn);
+      console.info(ln);
+      console.info(details); //data akan menjadi object baru ({age: 20, address: "Indonesia"})
+
+      // object destructuring in function parameter
+      {
+        function introduce({ firstName, middleName, lastName, age }) {
+          console.info(
+            `Hello, my name is ${firstName} ${middleName} ${lastName} and I am ${age} years old.`
+          );
+
+          const person = {
+            firstName: "Nuzul",
+            middleName: "Abdi",
+            lastName: "Abdi",
+            age: 19,
+          };
+
+          introduce(person);
+        }
+      }
+
+      // array destructuring in function parameter
+      {
+        function sum(array){
+          const [a, b, c] = array;
+          return a + b + c;
+        }
+
+        {
+          const numbers = [1, 2, 3];
+          const result = sum(numbers);
+          console.info(result); // Output: 6
+        }
+      }
+
+      {
+        const names = ["Muhhamad", "Ruhus", "Salam"];
+        const [firstName, middleName, lastName] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      // default value in destructuring object function parameter
+      {
+        function greet({ firstName = "Guest", lastName = "User" } = {}) {
+          console.info(`Hello, ${firstName} ${lastName}!`);
+        }
+
+        greet({ firstName: "Syauqi" }); // Output: Hello, Syauqi User!
+        greet(); // Output: Hello, Guest User!
+      }
+
+
+    </script>
+  </body>
+</html>
