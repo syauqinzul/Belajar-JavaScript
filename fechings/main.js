@@ -1,22 +1,20 @@
 console.log("OK");
 
-// Option 1: Use a working CORS proxy (api.allorigins.win)
+// Use CORS proxy - correct syntax
 const endpoint =
-  "https://reqres.in/api/users/3";
-
-// Option 2: Direct reqres endpoint (this one actually has CORS enabled)
-// const endpoint = "https://reqres.in/api/users/3";
-
-// fetch(endpoint)
-//   .then((data) => {
-//     if (!data.ok) throw new Error(`HTTP ${data.status}`);
-//     return data.json();
-//   })
-//   .then((result) => console.log("User data:", result.data))
-//   .catch((error) => console.error("Fetch error:", error));
+  "https://api.allorigins.win/get?url=https://reqres.in/api/users/3";
 
 async function hitApi() {
-  const api = await fetch(endpoint);
-  const data = await api.json();
-  console.log(api);
+  try {
+    const api = await fetch(endpoint);
+    if (!api.ok) throw new Error(`HTTP ${api.status}`);
+    const response = await api.json();
+    // allorigins wraps the response in a 'contents' property
+    const data = JSON.parse(response.contents);
+    console.log("User data:", data);
+  } catch (error) {
+    console.error("Fetch error:", error.message);
+  }
 }
+
+hitApi();

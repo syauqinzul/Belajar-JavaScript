@@ -1,0 +1,278 @@
+
+    :root {
+      --primary: #4361ee;
+      --secondary: #3a0ca3;
+      --accent: #f72585;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #4cc9f0;
+      --warning: #ffd166;
+      --info: #7209b7;
+      --border-radius: 12px;
+      --shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* Header Styles */
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 25px;
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      border-left: 8px solid var(--primary);
+    }
+    
+    #judul {
+      color: var(--primary);
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    #judul::after {
+      content: '';
+      position: absolute;
+      width: 70%;
+      height: 4px;
+      background: var(--accent);
+      bottom: -10px;
+      left: 15%;
+      border-radius: 2px;
+    }
+    
+    .subtitle {
+      color: var(--secondary);
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-top: 15px;
+    }
+    
+    /* Main Content Styles */
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    /* Section Styles */
+    .dom-section {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 25px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .dom-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .dom-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+    }
+    
+    #a::before {
+      background: var(--success);
+    }
+    
+    #b::before {
+      background: var(--info);
+    }
+    
+    .section-title {
+      color: var(--secondary);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px dashed #e9ecef;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .section-title i {
+      color: var(--accent);
+      font-size: 1.5rem;
+    }
+    
+    /* Paragraph Styles */
+    .paragraf-container {
+      margin-bottom: 25px;
+    }
+    
+    .paragraf {
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      background: #f8f9fa;
+      border-left: 5px solid;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    
+    .paragraf:hover {
+      background: #e9ecef;
+      transform: translateX(5px);
+    }
+    
+    .paragraf1 {
+      border-left-color: var(--success);
+    }
+    
+    .paragraf2 {
+      border-left-color: var(--warning);
+    }
+    
+    .paragraf3 {
+      border-left-color: var(--accent);
+    }
+    
+    .paragraf-label {
+      display: inline-block;
+      background: var(--dark);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    /* Link Style */
+    .link-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    a {
+      display: inline-block;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 4px 8px rgba(67, 97, 238, 0.3);
+    }
+    
+    a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(67, 97, 238, 0.4);
+    }
+    
+    a i {
+      margin-left: 8px;
+    }
+    
+    /* Fruit List Styles */
+    .fruit-list {
+      list-style: none;
+    }
+    
+    .fruit-list li {
+      padding: 15px;
+      margin-bottom: 12px;
+      background: white;
+      border-radius: 10px;
+      border: 2px solid #e9ecef;
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    
+    .fruit-list li:hover {
+      border-color: var(--info);
+      transform: translateX(10px);
+    }
+    
+    .fruit-list li::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    
+    .buah:nth-child(1)::before { background: #ff9e00; }
+    .buah:nth-child(2)::before { background: #ef233c; }
+    .buah:nth-child(3)::before { background: #ffd166; }
+    .buah:nth-child(4)::before { background: #ff9100; }
+    
+    .fruit-icon {
+      margin-right: 10px;
+      font-size: 1.2rem;
+      color: var(--secondary);
+    }
+    
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      margin-top: 20px;
+      color: var(--secondary);
+      font-weight: 500;
+    }
+    
+    .dom-highlight {
+      background: rgba(67, 97, 238, 0.1);
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      color: var(--primary);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      
+      #judul {
+        font-size: 2.2rem;
+      }
+      
+      .dom-section {
+        padding: 20px;
+      }
+    }
+    

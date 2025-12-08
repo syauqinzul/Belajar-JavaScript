@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Selection Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="judul">DOM Selection Explorer</h1>
+      <p class="subtitle">A visual guide to understanding DOM element selection with JavaScript</p>
+      <div id="container"></div>
+    </header>
+    
+    <main>
+      <section id="a" class="dom-section">
+        <h2 class="section-title"><i class="fas fa-code"></i> Section A: Text Elements</h2>
+        
+        <div class="paragraf-container">
+          <div class="paragraf paragraf1">
+            <span class="paragraf-label">.paragraf1</span>
+            <p>Paragraf pertama - Selected by class name</p>
+          </div>
+          
+          <div class="paragraf paragraf2">
+            <span class="paragraf-label">.paragraf2</span>
+            <p>Paragraf kedua - Another element with class selector</p>
+          </div>
+          
+          <div class="paragraf paragraf3">
+            <span class="paragraf-label">.paragraf3</span>
+            <p>Paragraf ketiga - Third element in this section</p>
+          </div>
+        </div>
+        
+        <div class="link-container">
+          <a href="https://www.google.com" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Link Menuju Kesuksesan
+          </a>
+          <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+            This link can be selected using <span class="dom-highlight">document.querySelector('a')</span>
+          </p>
+        </div>
+      </section>
+      
+      <section id="b" class="dom-section">
+        <h2 class="section-title"><i class="fas fa-list-ul"></i> Section B: Fruit List</h2>
+        <p style="margin-bottom: 20px;">All list items share the class <span class="dom-highlight">buah</span> for easy selection</p>
+        
+        <ul class="fruit-list">
+          <li class="buah">
+            <i class="fas fa-apple-alt fruit-icon"></i>
+            <span>Mangga - Sweet tropical fruit</span>
+          </li>
+          <li class="buah">
+            <i class="fas fa-apple-alt fruit-icon"></i>
+            <span>Apel - Crisp and refreshing</span>
+          </li>
+          <li class="buah">
+            <i class="fas fa-banana fruit-icon"></i>
+            <span>Pisang - Energy-boosting snack</span>
+          </li>
+          <li class="buah">
+            <i class="fas fa-lemon fruit-icon"></i>
+            <span>Jeruk - Vitamin C rich citrus</span>
+          </li>
+        </ul>
+        
+        <div style="margin-top: 25px; padding: 15px; background: #f0f8ff; border-radius: 10px;">
+          <p style="font-size: 0.95rem; color: var(--secondary);">
+            <i class="fas fa-lightbulb" style="color: var(--warning); margin-right: 8px;"></i>
+            <strong>DOM Selection Tip:</strong> Use <span class="dom-highlight">document.getElementsByClassName('buah')</span> to select all fruit items.
+          </p>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>This page demonstrates how to select DOM elements using JavaScript</p>
+      <p style="margin-top: 10px; font-size: 0.9rem;">
+        Try selecting elements with: 
+        <span class="dom-highlight">getElementById()</span>, 
+        <span class="dom-highlight">getElementsByClassName()</span>, 
+        <span class="dom-highlight">querySelector()</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
