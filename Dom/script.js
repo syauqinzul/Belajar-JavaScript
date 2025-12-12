@@ -33,7 +33,6 @@ allFruits.forEach((fruit) => {
   fruit.style.backgroundColor = "yellow";
 });
 
-
 // Manipulasi DOM
 // menambahkan elemen list baru ke dalam daftar buah
 const fruitList = document.querySelector(".fruit-list");
@@ -52,10 +51,13 @@ lemonIcon.style.color = "white";
 // memberikan margin pada icon lemon
 lemonIcon.style.marginRight = "8px";
 
+// menambahkan border pada icon lemon
 // menampilkan lingkaran sebelum icon lemon
 lemonIcon.style.border = "2px solid white";
 lemonIcon.style.borderRadius = "50%";
 lemonIcon.style.padding = "4px";
+
+//Manipulasi Style DOM
 
 // mengubah warna teks elemen dengan class "buah" menjadi ungu
 for (let i = 0; i < buahElements.length; i++) {
@@ -72,7 +74,7 @@ function logDomTree(element, indent = 0) {
   Array.from(element.children).forEach((child) =>
     logDomTree(child, indent + 2)
   );
-} 
+}
 logDomTree(document.body);
 
 // Output informasi DOM ke konsol
@@ -101,7 +103,7 @@ console.log("Jumlah elemen dengan class 'buah':", buahElements.length);
 console.log("Teks elemen pertama dengan class 'buah':", firstFruit.textContent);
 
 // menampilkan teks dari elemen list baru yang ditambahkan
-console.log("Teks elemen list baru:", newFruit.textContent);  
+console.log("Teks elemen list baru:", newFruit.textContent);
 
 // menampilkan seluruh elemen dengan class "buah"
 console.log("Seluruh elemen dengan class 'buah':", allFruits);
@@ -114,6 +116,21 @@ console.log("Elemen dengan tag <h1>:", h1[0]);
 
 // menampilkan elemen dengan tag <p>
 console.log("Elemen dengan tag <p>:", p);
+
+// menampilkan elemen dengan class "fruit-list"
+console.log(
+  "Elemen dengan class 'fruit-list':",
+  document.querySelector(".fruit-list")
+);
+buahElements.forEach(function (item, index) {
+  console.log(`${index + 1}. ${item.textContent}`);
+});
+
+// menampilkan teks dari setiap elemen dengan class "buah"
+buahElements.forEach(function (item, index) {
+  console.log(`${index + 1}. ${item.textContent}`);
+});
+
 
 
 

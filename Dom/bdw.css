@@ -1,0 +1,163 @@
+/* Style dasar halaman */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background-color: #f5f5f5;
+  transition: background-color 0.4s ease;
+}
+
+/* Judul */
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Tombol umum */
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+/* Tombol Ubah Warna */
+#tombolUbahWarna {
+  background-color: #3498db;
+}
+
+#tombolUbahWarna:hover {
+  background-color: #1f6fa3;
+}
+
+/* Tombol Random Warna */
+#tombolRandomWarna {
+  background-color: #e67e22;
+}
+
+#tombolRandomWarna:hover {
+  background-color: #b26018;
+}
+
+
+/* KOTAK WARNA */
+.kotak {
+  width: 80px;
+  height: 80px;
+  margin: 20px auto 10px auto;
+  border-radius: 10px;
+  background-color: red;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Slider Range */
+input[type="range"] {
+  width: 200px;
+  margin-bottom: 20px;
+  accent-color: #e74c3c;
+  cursor: pointer;
+}
+
+input[type="range"]:hover {
+  opacity: 0.8;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  button {
+    width: 80%;
+  }
+  .kotak {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Style dasar halaman */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background-color: #f0f4f8;
+}
+
+/* Judul */
+h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Tombol umum */
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+/* Tombol Ubah Warna */
+#tombolUbahWarna {
+  background-color: #27ae60;
+}
+
+#tombolUbahWarna:hover {
+  background-color: #1e8449;
+}
+
+/* Tombol Random Warna */
+#tombolRandomWarna {
+  background-color: #8e44ad;
+}
+#tombolRandomWarna:hover {
+  background-color: #6c3483;
+}
+
+/* KOTAK WARNA */
+.kotak {
+  width: 80px;
+  height: 80px;
+  margin: 20px auto 10px auto;
+  border-radius: 10px;
+  background-color: red;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Slider Range */
+input[type="range"] {
+  width: 200px;
+  margin-bottom: 20px;
+  accent-color: #2980b9;
+  cursor: pointer;
+}
+
+input[type="range"]:hover {
+  opacity: 0.85;
+}
+/* Responsif */
+@media (max-width: 600px) {
+  button {
+    width: 80%;
+  }
+  .kotak {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Style dasar halaman */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #e2e8f0;
+  text-align: center;
+  padding: 40px;
+  transition: background 0.3s ease;
+} 
+
