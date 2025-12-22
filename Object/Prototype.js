@@ -26,12 +26,12 @@ class Mahasiswa {
   constructor(nama, energi) {
     this.nama = nama;
     this.energi = energi;
-  } 
+  }
 
   makan(porsi) {
     this.energi += porsi;
     console.log(`Halo ${this.nama}, selamat makan!`);
-  } 
+  }
 
   main(jam) {
     this.energi -= jam;
@@ -46,4 +46,3 @@ class Mahasiswa {
 
 let syauqi = new Mahasiswa("Syauqi", 10);
 let palji = new Mahasiswa("Palji", 20);
-
