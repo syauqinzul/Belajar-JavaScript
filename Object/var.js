@@ -114,3 +114,27 @@ export const privateStaticField = class {
     return this.#privateStaticField;
   } 
 };
+export const staticBlockClass = class {
+  static staticValue
+;  static {
+    this.staticValue = i + j + k;
+  } 
+};
+
+export const topLevelAwait = await Promise.resolve(i + j + k);
+export const pipelineOperator = ((value) => value +  (i + j + k))(0);
+export const recordAndTuple = { i, j, k };
+export const tupleVar = [i, j, k];
+export const shadowedVar = (() => {
+  let i = 5;
+  let j = 15;
+  return i + j + k;
+}();
+export const privateMethodClass = class {
+  #privateMethod() {
+    return i + j + k;
+  } 
+  getPrivateMethodValue() {
+    return this.#privateMethod();
+  } 
+};
