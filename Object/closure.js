@@ -23,3 +23,23 @@ let selamatSiang = ucapkanSalam('siang')
 let selamatMalam = ucapkanSalam('malam')
 
 console.dir(selamatMalam('Syauqi'));g
+
+// function ucapkanSalam(waktu) {
+//   return function(nama) {
+//     console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`);
+//   }
+// }
+
+// let selamatPagi = ucapkanSalam('pagi')
+// let selamatSiang = ucapkanSalam('siang')
+// let selamatMalam = ucapkanSalam('malam') 
+// }
+//   return function(nama) {
+//     console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`);
+//   }
+// }
+
+// let selamatPagi = ucapkanSalam('pagi')
+// let selamatSiang = ucapkanSalam('siang')
+// let selamatMalam = ucapkanSalam('malam')
+
