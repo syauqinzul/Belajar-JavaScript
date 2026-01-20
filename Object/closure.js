@@ -10,19 +10,18 @@
 // panggilNama('Nopal');
 // panggilNama('Rahul');
 
-
-
 function ucapkansalam(waktu) {
-  return function(nama) {
+  return function (nama) {
     console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`);
-  }
+  };
 }
 
-let selamatPagi = ucapkanSalam('pagi')
-let selamatSiang = ucapkanSalam('siang')
-let selamatMalam = ucapkanSalam('malam')
+let selamatPagi = ucapkanSalam("pagi");
+let selamatSiang = ucapkanSalam("siang");
+let selamatMalam = ucapkanSalam("malam");
 
-console.dir(selamatMalam('Syauqi'));g
+console.dir(selamatMalam("Syauqi"));
+g;
 
 // function ucapkanSalam(waktu) {
 //   return function(nama) {
@@ -32,7 +31,7 @@ console.dir(selamatMalam('Syauqi'));g
 
 // let selamatPagi = ucapkanSalam('pagi')
 // let selamatSiang = ucapkanSalam('siang')
-// let selamatMalam = ucapkanSalam('malam') 
+// let selamatMalam = ucapkanSalam('malam')
 // }
 //   return function(nama) {
 //     console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`);
@@ -42,4 +41,3 @@ console.dir(selamatMalam('Syauqi'));g
 // let selamatPagi = ucapkanSalam('pagi')
 // let selamatSiang = ucapkanSalam('siang')
 // let selamatMalam = ucapkanSalam('malam')
-
